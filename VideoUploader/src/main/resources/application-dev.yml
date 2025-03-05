@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+      region:
+        static: ${AWS_REGION:ap-south-1}
+      endpoint: ${LOCALSTACK_ENDPOINT:localhost:4566}
+
+  docker:
+    compose:
+      enabled: false
