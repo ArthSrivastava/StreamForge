@@ -2,12 +2,18 @@ spring:
   cloud:
     aws:
       credentials:
-        access-key: ${AWS_ACCESS_KEY}
-        secret-key: ${AWS_SECRET_KEY}
+        access-key: ${AWS_ACCESS_KEY:test}
+        secret-key: ${AWS_SECRET_KEY:test}
       region:
         static: ${AWS_REGION:ap-south-1}
-      endpoint: ${LOCALSTACK_ENDPOINT:localhost:4566}
+      endpoint: ${LOCALSTACK_ENDPOINT:http://localhost:4566}
+      s3:
+        path-style-access-enabled: true  #since localstack works on path-style s3 pre-signed URLs
 
   docker:
     compose:
       enabled: false
+
+  #TODO: remove this config after handling persistence
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
