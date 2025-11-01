@@ -2,12 +2,12 @@ package com.example.videouploader.s3;
 
 import io.awspring.cloud.s3.S3Template;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import java.net.URL;
 import java.time.Duration;
 
-@Configuration
+@Service
 @RequiredArgsConstructor
 public class S3OperationsService {
     private final S3Template s3Template;

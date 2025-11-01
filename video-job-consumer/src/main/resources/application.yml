@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: VideoJobConsumer
+  profiles:
+    active: dev

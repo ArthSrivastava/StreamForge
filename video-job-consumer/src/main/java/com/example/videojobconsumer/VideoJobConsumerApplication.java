@@ -1,13 +1,13 @@
-package com.example.videoprocessing;
+package com.example.videojobconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VideoProcessingApplication {
+public class VideoJobConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VideoProcessingApplication.class, args);
+		SpringApplication.run(VideoJobConsumerApplication.class, args);
 	}
 
 }

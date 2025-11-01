@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY:test}
+        secret-key: ${AWS_SECRET_KEY:test}
+      region:
+        static: ${AWS_REGION:ap-south-1}
+      endpoint: ${LOCALSTACK_ENDPOINT:http://localhost:4566}
